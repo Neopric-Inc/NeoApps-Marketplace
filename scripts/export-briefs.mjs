@@ -14,6 +14,7 @@ const categories = new Map([
   ['Data, Research & AI Micro-Utilities', 'data-research-ai'],
   ['Education, Communities & Events', 'education-community'],
   ['Niche Small Business & Field Ops', 'small-business-field-ops'],
+  ['Nonprofit Operations', 'nonprofits'],
 ]);
 for (const app of apps) {
   if (!categories.has(app.category)) throw new Error('Missing category slug for ' + app.category);
@@ -22,13 +23,20 @@ const directory = new URL('resources/briefs/', root);
 await mkdir(directory, { recursive: true });
 for (const [category, slug] of categories) {
   const text = ['# ' + category, ''];
+  let group;
   for (const app of apps.filter(app => app.category === category)) {
+    if (app.group && app.group !== group) {
+      group = app.group;
+      text.push('## ' + group, '');
+    }
     text.push(
-      '## ' + app.id + '. ' + app.title, '', app.pitch, '',
+      (app.group ? '### ' : '## ') + app.id + '. ' + app.title, '', app.pitch, '',
       '- Buyer: ' + app.buyer,
       '- Release wave: ' + app.wave + ' (' + ['','Pilot','Expand','Specialist'][app.wave] + ')',
       '- Proposed access: ' + app.access,
       '- Runtime AI in the brief: ' + (app.ai ? 'Model required' : 'No model required'),
+      ...(app.reference ? ['', '[NeoApps.AI grant application template](' + app.reference + ')'] : []),
+      ...(app.roles ? ['', '**Roles and permissions**', '', app.roles] : []),
       '', '**Build prompt**', '', app.prompt, '', '**Acceptance test**', '', app.test, ''
     );
   }

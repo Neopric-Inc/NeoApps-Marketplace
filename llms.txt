@@ -1,8 +1,8 @@
 # NeoApps.AI Marketplace
 
-> A curated marketplace design for NeoApps business applications. Eight interactive pilots demonstrate buyer workflows. The accompanying playbook documents 100 proposed apps across six categories.
+> A curated marketplace design for NeoApps business applications. Ten interactive pilots demonstrate buyer workflows. The accompanying playbook documents 119 proposed apps across seven categories.
 
-Use the category briefs for app-specific build prompts and acceptance tests. Use the PRD for the intended production experience, where a purchase deploys an app into the buyer’s own NeoApps account. Checkout, refunds, sign-in, notifications, and deployment in this static repository are browser-local simulations. Prices are illustrative. The 100 playbook entries describe planned work, including the eight pilot concepts.
+Use the category briefs for app-specific build prompts and acceptance tests. Use the PRD for the intended production experience, where a purchase deploys an app into the buyer’s own NeoApps account. Checkout, refunds, sign-in, notifications, and deployment in this static repository are browser-local simulations. Prices are illustrative. The 119 playbook entries describe planned work, including the ten pilot concepts.
 
 ## Product and implementation
 
@@ -17,6 +17,8 @@ Use the category briefs for app-specific build prompts and acceptance tests. Use
 - [Data, research, and AI micro-utilities](resources/briefs/data-research-ai.md) — Briefs 56–75.
 - [Education, communities, and events](resources/briefs/education-community.md) — Briefs 76–90.
 - [Small business and field operations](resources/briefs/small-business-field-ops.md) — Briefs 91–100.
+- [Nonprofit operations](resources/briefs/nonprofits.md) — Briefs 101–119, grouped by fundraising, programs, governance, field operations and live coordination. Each includes role permissions, a build prompt and a test.
+- [Nonprofit collection](https://neopric-inc.github.io/NeoApps-Marketplace/#/nonprofits) — Browse all 19 and try the grant reporting and volunteer hours samples.
 
 ## Optional
 

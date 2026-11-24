@@ -10,6 +10,7 @@ const icons={
  cake:'<path d="M3 16h18v5H3zM5 16v-6h14v6M8 10V7h8v3m-4-3V5M12 2l.4 1.2"/>'
 };
 const configs={
+ ...nonprofitDemos,
  1:['trip','Switchback','Banff weekend','Settle shared expenses for Maya, Liam and Chloe.','#226c59','#deefe8'],
  16:['lunch','Lunchroom','Friday lunch order','Choose a dish and see the kitchen tally before the cutoff.','#945015','#f7e8d4'],
  36:['quote','Fieldwork Studio','Project estimate','Configure a website package for fictional client Northline Goods.','#5e4784','#ece6f5'],
@@ -38,6 +39,8 @@ const options=(values,selected)=>values.map(s=>'<option'+(s===selected?' selecte
 const read=(form,name)=>String(new FormData(form).get(name)||'').trim();
 const firstCsv='Name,Visit,Phone\nAri,2026-05-01,(506) 555-0101\nJules,2026-05-14,506-555-0102\nDev,2026-02-30,506-555-0103';
 function initial(){
+if(id===102)return grantSample();
+if(id===110)return volunteerSample();
 return {
  1:{expenses:[{title:'Cabin',payer:'Maya',amount:90,members:['Maya','Liam','Chloe']},{title:'Dinner',payer:'Liam',amount:30,members:['Liam','Maya']}]},
  16:{orders:[{dish:'Green curry',note:''}],closed:false},
@@ -108,13 +111,14 @@ function volunteer(){
 function cake(){const orders=state.bookings[state.date],full=orders.length>=3;const price=(state.tier==='Single tier'?60:95)+(state.fondant?15:0);
  return panel('Build an order','<div class="minigrid">'+field('Size','<select data-bind="tier">'+options(['Single tier','Double tier'],state.tier)+'</select>')+field('Flavor','<select data-bind="flavor">'+options(['Vanilla','Chocolate','Lemon'],state.flavor)+'</select>')+'</div><label class="tick"><input data-bind="fondant" type="checkbox" '+(state.fondant?'checked':'')+'> Fondant finish · +$15</label>'+field('Pickup date','<select data-bind="date">'+options(Object.keys(state.bookings),state.date)+'</select>')+field('Allergy notes','<input data-bind="notes" maxlength="80" value="'+esc(state.notes)+'" placeholder="Optional">')+line('Order estimate','<span class="amt">'+cash(price)+'</span>')+'<div class="actions"><button data-action="book" class="primary" '+(full?'disabled':'')+'>'+ (full?'Pickup day full':'Book sample order')+'</button></div>')+panel('Pickup schedule','<p class="hint">'+state.date+'</p>'+line('Booked pickups',orders.length+' / 3')+orders.map((o,i)=>line('Order '+(i+1),esc(o.title)+(o.notes?'<br><small>'+esc(o.notes)+'</small>':''))).join('')+'<p class="caption">'+(full?'Choose another pickup date.':(3-orders.length)+' pickup '+(3-orders.length===1?'place':'places')+' available.')+'</p>',true);
 }
-const pages={1:trip,16:lunch,36:quote,37:brand,56:cleaner,57:tags,79:volunteer,92:cake};
+const pages={1:trip,16:lunch,36:quote,37:brand,56:cleaner,57:tags,79:volunteer,92:cake,102:grantDesk,110:volunteerDesk};
 function render(focusKey){
  root.innerHTML='<header><div class="bar"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round">'+icons[icon]+'</svg></span><strong>'+workspace+'</strong><span class="sample">Sample workspace</span></div></header><main class="container"><h1>'+title+'</h1><p class="intro">'+summary+'</p><div class="split">'+pages[id]()+'</div><button type="button" class="reset" data-action="reset">Reset sample</button></main>';
  if(focusKey){const el=root.querySelector(focusKey);el?.focus({preventScroll:true});}
 }
 root.addEventListener('click',event=>{const b=event.target.closest('[data-action]');if(!b)return;const a=b.dataset.action,i=Number(a.split('-').pop());let msg='';
  if(a==='reset'){state=initial();msg='Sample restored.';}
+ else if(id===102||id===110){msg=nonprofitAction(a,i);}
  else if(a==='clock'){state.closed=!state.closed;msg=state.closed?'It is 11:31 AM. Orders are closed.':'Orders reopened at 11:15 AM.';}
  else if(a==='save-quote'){state.saved=200*state.qty+(state.review?150:0);msg='Estimate saved in this sample.';}
  else if(a.startsWith('asset-')){state.done[i]=!state.done[i];if(i===3&&!state.done[i])state.file='';msg='Checklist updated.';}
@@ -139,7 +143,8 @@ root.addEventListener('change',event=>{const t=event.target,k=t.dataset.bind;if(
  render('[data-bind="'+k+'"]');
 });
 root.addEventListener('submit',e=>{e.preventDefault();const f=e.target,kind=f.dataset.form;let msg='';
- if(kind==='expense'){const members=new FormData(f).getAll('member');if(!members.length){say('Choose at least one traveler.');return;}const title=read(f,'title');if(!title){say('Name the expense.');return;}state.expenses.push({title,payer:read(f,'payer'),amount:Number(read(f,'amount')),members});msg='Expense and settlement updated.';}
+ if(id===102||id===110){msg=nonprofitSubmit(kind,f);}
+ else if(kind==='expense'){const members=new FormData(f).getAll('member');if(!members.length){say('Choose at least one traveler.');return;}const title=read(f,'title');if(!title){say('Name the expense.');return;}state.expenses.push({title,payer:read(f,'payer'),amount:Number(read(f,'amount')),members});msg='Expense and settlement updated.';}
  else if(kind==='lunch'){if(state.closed){say('Orders are closed.');return;}state.orders.push({dish:read(f,'dish'),note:read(f,'note')});msg='Order added to the kitchen tally.';}
  else if(kind==='csv'){state.raw=read(f,'raw');state.dateCol=read(f,'date');state.phoneCol=read(f,'phone');try{state.result=cleanCsv();msg='Cleaning report ready.';}catch(err){say(err.message);return;}}
  else if(kind==='dish'){let name=read(f,'name');if(!name){say('Name your dish.');return;}state.dishes.push({title:name,cat:read(f,'category')});msg='Dish added to the table.';}

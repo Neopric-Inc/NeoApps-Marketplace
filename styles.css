@@ -7,3 +7,15 @@ h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{line-height:1.15;letter-spacing:-.045em}h1{fo
 @media(max-width:730px){.wrap{width:calc(100% - 36px)}.nav{min-height:60px}.nav-items{display:none}.nav-items.open{display:flex;position:absolute;top:59px;left:0;right:0;padding:18px;background:#111318;border-bottom:1px solid var(--line);justify-content:center}.nav-items .active:after{display:none}.mobilemenu{display:grid}.right{gap:8px}.nav-rightlink span{display:none}.nav-left{gap:10px}.hero-grid{grid-template-columns:1fr;min-height:0}.hero-copy{padding:35px 0 0;max-width:550px}.hero h1{font-size:clamp(3rem,9vw,4.2rem);margin-top:14px}.hero .intro{max-width:520px}.hero-art{position:relative;left:auto;right:auto;height:clamp(155px,39vw,243px);margin:0 -15px;justify-content:center}.hero-art img{height:100%;max-width:510px;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 87%,transparent)}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding:30px 0 40px}.pills{flex-wrap:nowrap;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:thin}.cols,.twog{grid-template-columns:1fr}.side{position:static}.bookcall{align-items:flex-start;flex-direction:column;padding:20px}.footrow{padding:22px 0}.brieflink{gap:8px;grid-template-columns:34px 1fr auto}.bookstats>div{padding:12px}.itemrow{flex-wrap:wrap}.thumb{aspect-ratio:1.82}.titlebar{margin-bottom:15px}}
 @media(max-width:500px){.cards{grid-template-columns:1fr}.thumb{aspect-ratio:2.1}.bookstats small{font-size:.78rem}.cardbody{padding:16px 18px}.nav-rightlink{display:none}.titlebar .link{font-size:.82rem}.button{font-size:.88rem}.brieflink .status{display:none}.searchbox{gap:7px}.form textarea{min-height:86px}.bookcall .bookicon{display:none}.footlinks{column-gap:12px}.panel{padding:17px}.titlebar{align-items:baseline}.hero-small{padding:20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition:none!important}}
+
+.collection-link{margin:0 0 18px}
+.nonprofit-head{padding:clamp(22px,4vw,48px)}
+.nonprofit-head h1{margin-top:12px}
+.nonprofit-group{margin:36px 0}
+.nonprofit-group h2{margin-bottom:14px}
+.nonprofit-pilots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.nonprofit-pilots .thumb{aspect-ratio:2.9/1}
+.nonprofit-brief{grid-template-columns:minmax(0,1fr) minmax(145px,19%);padding:17px 20px}
+.nonprofit-brief h3{font-size:1rem}
+.nonprofit-brief p{margin:5px 0 0;font-size:.94rem}
+@media(max-width:650px){.nonprofit-pilots,.nonprofit-brief{grid-template-columns:1fr}.nonprofit-brief{gap:7px}}
