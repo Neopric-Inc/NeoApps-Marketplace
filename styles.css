@@ -19,3 +19,16 @@ h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{line-height:1.15;letter-spacing:-.045em}h1{fo
 .nonprofit-brief h3{font-size:1rem}
 .nonprofit-brief p{margin:5px 0 0;font-size:.94rem}
 @media(max-width:650px){.nonprofit-pilots,.nonprofit-brief{grid-template-columns:1fr}.nonprofit-brief{gap:7px}}
+
+.ref-nav{display:flex;flex-wrap:wrap;align-items:center;gap:9px 26px;min-height:64px;padding-block:12px}
+.ref-nav a:not(.brand),.ref-main a{color:var(--accent);text-decoration:underline;text-underline-offset:.17em}
+.ref-main{max-width:860px;padding-block:clamp(30px,6vw,66px);overflow-wrap:anywhere}
+.ref-main h1{font-size:clamp(2.1rem,5vw,3.5rem);letter-spacing:-.045em;line-height:1.08}
+.ref-main h2{font-size:clamp(1.3rem,3vw,1.7rem);margin:1.7em 0 .4em}
+.ref-main p,.ref-main blockquote,.ref-main ol,.ref-main ul,.ref-main dl{margin:1em 0}
+.ref-main blockquote{border-left:3px solid var(--accent);padding:5px 18px;color:var(--soft)}
+.ref-main pre,.ref-main code{white-space:pre-wrap;overflow-wrap:anywhere}
+.ref-main ol,.ref-main ul{padding-left:1.45rem}.ref-main li+li{margin-top:.65rem}
+.ref-topics{display:flex;flex-wrap:wrap;gap:8px 20px;margin:24px 0}
+.ref-main .ref-list{list-style:none;margin:0;padding:0}.ref-list li{border-top:1px solid var(--line);padding:12px 0}
+.ref-main .ref-list p{margin:3px 0}.reference-page .facts{max-width:640px}

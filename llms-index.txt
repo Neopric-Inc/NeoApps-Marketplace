@@ -1,0 +1,37 @@
+# NeoApps.AI Marketplace
+> Explore 119 NeoApps.AI business app briefs across 7 categories, including 10 interactive samples. Find a build prompt, access rules and an acceptance test.
+## Start here
+- [Complete marketplace copy](https://neopric-inc.github.io/NeoApps-Marketplace/llms.txt) – All briefs, pilot workflows, public screens, playbook and product requirements.
+- [Catalog](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/) – Browse all briefs without JavaScript.
+- [Connection guide](https://neopric-inc.github.io/NeoApps-Marketplace/connect/) – Set up an assistant and verify the connection.
+- [Official NeoApps setup](https://neoapps.ai/get-started.html) – Instructions by assistant.
+- [Platform agent index](https://neoapps.ai/llms.txt) – NeoApps Cloud and developer documentation.
+- [Marketplace workbook](https://neopric-inc.github.io/NeoApps-Marketplace/resources/marketplace-playbook.xlsx)
+- [Product requirements](https://neopric-inc.github.io/NeoApps-Marketplace/resources/marketplace-prd.md)
+## Collections
+- [Personal & Everyday Life](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/#category-personal-everyday-life) – 15 briefs.
+- [Team Operations & Internal Tools](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/#category-team-operations-internal-tools) – 20 briefs.
+- [Client Services, Agencies & Consultants](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/#category-client-services-agencies-consultants) – 20 briefs.
+- [Data, Research & AI Micro-Utilities](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/#category-data-research-ai-micro-utilities) – 20 briefs.
+- [Education, Communities & Events](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/#category-education-communities-events) – 15 briefs.
+- [Niche Small Business & Field Ops](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/#category-niche-small-business-field-ops) – 10 briefs.
+- [Nonprofit Operations](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/#category-nonprofit-operations) – 19 briefs.
+## Plain-text category briefs
+- [Client Services, Agencies & Consultants](https://neopric-inc.github.io/NeoApps-Marketplace/resources/briefs/client-services.md)
+- [Data, Research & AI Micro-Utilities](https://neopric-inc.github.io/NeoApps-Marketplace/resources/briefs/data-research-ai.md)
+- [Education, Communities & Events](https://neopric-inc.github.io/NeoApps-Marketplace/resources/briefs/education-community.md)
+- [Nonprofit Operations](https://neopric-inc.github.io/NeoApps-Marketplace/resources/briefs/nonprofits.md)
+- [Personal & Everyday Life](https://neopric-inc.github.io/NeoApps-Marketplace/resources/briefs/personal.md)
+- [Niche Small Business & Field Ops](https://neopric-inc.github.io/NeoApps-Marketplace/resources/briefs/small-business-field-ops.md)
+- [Team Operations & Internal Tools](https://neopric-inc.github.io/NeoApps-Marketplace/resources/briefs/team-operations.md)
+## Interactive pilots
+- [Trip Expense Splitter](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/1/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/1).
+- [Team Lunch Orders](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/16/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/16).
+- [Project Quote Calculator](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/36/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/36).
+- [Brand Asset Portal](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/37/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/37).
+- [CSV Cleaner](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/56/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/56).
+- [Interview Insight Tagger](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/57/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/57).
+- [Volunteer Shift Sign-Up](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/79/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/79).
+- [Custom Cake Orders](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/92/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/92).
+- [Grant Compliance & Reporting Tracker](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/102/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/102).
+- [Volunteer Hours & Activity Log](https://neopric-inc.github.io/NeoApps-Marketplace/catalog/110/) – [Try the sample](https://neopric-inc.github.io/NeoApps-Marketplace/#/demo/110).

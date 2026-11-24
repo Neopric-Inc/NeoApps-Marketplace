@@ -30,10 +30,13 @@ The demo stores orders, support tickets, requests, and reviews in the browser. P
 | [flows.js](flows.js), [ops.js](ops.js) | Buyer journeys and staff preview |
 | [examples](examples/) | Ten interactive sample apps |
 | [data.js](data.js) | The playbook records used by the website |
-| [llms.txt](llms.txt) | Machine-readable entry point linking to the PRD and category briefs |
+| [llms.txt](llms.txt), [llms-index.txt](llms-index.txt) | Full public marketplace text and compact resource index |
+| [catalog](catalog/), [connect](connect/), [sitemap.xml](sitemap.xml) | Searchable HTML briefs, assistant setup and canonical page URLs |
 | [resources](resources/) | Product requirements, playbook workbook, and Markdown briefs |
 
-The category Markdown files are generated from `data.js`. After editing the playbook records, run `node scripts/export-briefs.mjs`. Review the workbook separately when its editorial content changes.
+After editing the catalog, review the workbook and run `node scripts/export-briefs.mjs` followed by `python3 scripts/export-discovery.py`. The second command uses Python 3 and Node.js to regenerate the standalone HTML, sitemap and both text editions from the current storefront, fictional demos, playbook and PRD. Commit the generated files with their sources. GitHub Pages serves them directly.
+
+The [full text](https://neopric-inc.github.io/NeoApps-Marketplace/llms.txt) and [sitemap](https://neopric-inc.github.io/NeoApps-Marketplace/sitemap.xml) belong to the GitHub Pages marketplace. The [platform agent index](https://neoapps.ai/llms.txt) and [official assistant setup](https://neoapps.ai/get-started.html) live on NeoApps.AI.
 
 ## Attribution
 
