@@ -1,0 +1,23 @@
+# NeoApps.AI Marketplace
+
+> A curated marketplace design for NeoApps business applications. Eight interactive pilots demonstrate buyer workflows. The accompanying playbook documents 100 proposed apps across six categories.
+
+Use the category briefs for app-specific build prompts and acceptance tests. Use the PRD for the intended production experience, where a purchase deploys an app into the buyer’s own NeoApps account. Checkout, refunds, sign-in, notifications, and deployment in this static repository are browser-local simulations. Prices are illustrative. The 100 playbook entries describe planned work, including the eight pilot concepts.
+
+## Product and implementation
+
+- [Marketplace product requirements](resources/marketplace-prd.md) — Buyer journey, factory publishing, deployment states, roles, licences, support, and open decisions.
+- [Repository guide](README.md) — Local run instructions, sample workflows, and source files.
+
+## App briefs
+
+- [Personal and everyday life](resources/briefs/personal.md) — Briefs 1–15.
+- [Team operations and internal tools](resources/briefs/team-operations.md) — Briefs 16–35.
+- [Client services, agencies, and consultants](resources/briefs/client-services.md) — Briefs 36–55.
+- [Data, research, and AI micro-utilities](resources/briefs/data-research-ai.md) — Briefs 56–75.
+- [Education, communities, and events](resources/briefs/education-community.md) — Briefs 76–90.
+- [Small business and field operations](resources/briefs/small-business-field-ops.md) — Briefs 91–100.
+
+## Optional
+
+- [Editable marketplace playbook](resources/marketplace-playbook.xlsx) — Launch plan, catalog, builder briefs, marketplace decisions, and variants.
