@@ -143,7 +143,7 @@ def page(path, title, description, body, kind="WebPage"):
 {link("Catalog",prefix+CATALOG)} {link("Connect your assistant",prefix+GUIDE)}</nav></header>
 <main id="content" class="wrap ref-main" tabindex="-1"><h1>{escape(title)}</h1>
 {body}
-</main><footer><div class="wrap ref-nav">{link("Interactive marketplace",prefix)} {link("Complete marketplace text",prefix+"llms.txt")} {link("Text index",prefix+"llms-index.txt")} {link("NeoApps.AI",PLATFORM)}</div></footer></body></html>
+</main><footer><div class="wrap ref-nav">{link("Interactive marketplace",prefix)} {link("llms.txt",prefix+"llms.txt")} {link("Text index",prefix+"llms-index.txt")} {link("NeoApps.AI",PLATFORM)}</div></footer></body></html>
 """
 
 

@@ -150,4 +150,5 @@ root.addEventListener('submit',e=>{e.preventDefault();const f=e.target,kind=f.da
  else if(kind==='dish'){let name=read(f,'name');if(!name){say('Name your dish.');return;}state.dishes.push({title:name,cat:read(f,'category')});msg='Dish added to the table.';}
  render('form[data-form="'+kind+'"] button[type=submit]');say(msg);
 });
+if (document.defaultView?.frameElement) document.getElementById('sample-footer').hidden = true;
 render();

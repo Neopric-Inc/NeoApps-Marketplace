@@ -4,3 +4,5 @@
 
 .shift-record + .shift-record{border-top:1px solid var(--border);margin-top:13px;padding-top:10px}
 .shift-record .actions{margin-top:6px}
+
+#sample-footer{padding:12px 20px;border-top:1px solid var(--border);text-align:center}#sample-footer a{color:var(--accent)}
